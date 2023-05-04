@@ -1,0 +1,17 @@
+class ClearTextFrame:
+	tuka pravam frame shto ke se koristi za enkripcija i dekripcija taka shto se generitaat razlicni alphanumericki vrednosti
+	za header, PN, data so razlicni golemini
+MICalc():
+	tuka gi prakjam IV,Counter Preload, header, i data i mi e funkcijata kade se vrshi enkripcija i presmetuvanje na MIC
+	isto taka se pravi i padiranje na header i data vo slucaj ako ne se 128 bajti
+	se povikuva i podocna pri dekripcija
+sendEncrypted():
+	ovoj metod e vo klasata EncryptedFarme
+	samata funkcija sluzi za enkriptiranje na datata i Counter preload blok po blok
+decryptDATA():
+	dekriptiranje blok po blok
+checkMIC():
+	od decryptDATA(), novata data se prakja kaj tuka, kade shto se povikuva MICalc() za verifikacija na MIC
+	
+	
+	

@@ -1,0 +1,15 @@
+- Објаснете ги параметрите што ги има во барањата и одговорите. Зошто ни се потребни?
+main(): se kreiraat users Alice i Bob i se dodavaat vo CA system.
+Alice zapocnuva da komunicira so Bob preku AStart().
+AStart(): se generiraat α, p, αx i se prakjaat do Bob preku funkcija BobReceiveData()
+BobReceiveData(): bob gi prima α, p, αx i generira αy, CertB, EK(sB{αy, αx}) i gi prakja kaj alise preku funkcija AliceReceiveData()
+AliceReceiveData(): gi prima informaciite od bob od vtorata poraka i generira CertA, EK(sA{αx, αy}) i gi prakja kaj Bob preku funkcija BobFinal()
+BobFinal: potvrduva Diffie-Hellman parametri za da bide siguren dali porataka e od Alive
+class CA: za proverka na validnosta na user i dodeluvanje na sertifikat
+class Certificate: se cuvaat informacii za sertifikat
+class DiffieHellman: cuvanje na p i alpha
+class PrimitiveRootGen i PrimeNumberGen: generiranje primitive element i prime
+
+
+- Дали може да извршиме Man-in-the-Middle напад врз овој протокол? Зошто?
+so samoto implementiranje na DH parametri i sertifikati se eliminira moznosta za MIM napad

@@ -1,0 +1,13 @@
+Main method:
+	-generira ID za A i B, i se vospostavuva potrebni podatoci za niv(KEK)
+	-povikuvanje na soodvetni metodi za izvrshuvanje na zadacata
+klasa USER i vaznite metodi vo nejze:
+	GenerateNonce() - generira nonce od strana na alice koj se prakja kaj KDC
+	VerifyAlice()   - site potrebni raboti se izvrshuvaat za da se identifikuva Alice
+	VerifyBob()     - isto kako i VerifyAlice() ama sega za Bob
+	SendMessage()   - prakanje i enkripcija na poraka so Kses shto beshe established
+	RecieveMessage()- dekripcija i proverka na poraka preku timestamp
+klasa KDC i vaznite metodi vo nejze:
+	Request()	- klasata shto Alice ja povikuva,  se generira Kses za A i B i se prakjaat kaj A
+	AddUser()	- dodavanje na user i dodavanje na negoviot kluc vo servero
+	NewKey()	- generiranje na kluc
